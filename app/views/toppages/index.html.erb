@@ -1,0 +1,8 @@
+<h2>area</h2>
+<%= form_with(scope: :prefecture, url: '/', method: :get, locel: true) do |f| %>
+  <%= f.select :area_id, @areas.map{|o| [ o[:name], o[:id] ] }, { selected: params[:area_id], include_blank: "選んで下さい" }, {} %>
+  <%= f.submit "検索" %>
+<% end %>
+
+<h2>prefectures</h2>
+<%= @prefectures %>
